@@ -9,7 +9,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="root"></div>
+    <div id="container">
+        <div id="form">
+            <h3 id="form-title">Choose an image</h3>
+            <div id="images">
+
+            </div>
+
+            <div id="size">
+                <div class="size-item" r='3' c='3'>3x3</div>
+                <div class="size-item" r='4' c='4'>4x4</div>
+                <div class="size-item" r='5' c='5'>5x5</div>
+                <div class="size-item" r='6' c='6'>6x6</div>
+            </div>
+        </div>
+
+        <div id="play">
+            <div id="top">
+                <div id="board"></div>
+                <div id="sidebar">
+                    <img id="img-preview" alt="Preview">
+                    <p id="moved">Move: 0</p>
+                    <!-- <p id="homeButton"></p> -->
+                </div>
+            </div>
+            <p id="tutorial">
+                Use arrow keys to select puzzle pieces.<br>
+                Hold down <b>control</b> or <b>command</b> key to move puzzle pieces
+            </p>
+        </div>
+    </div>
 
     <script src="game.js"></script>
 </body>
