@@ -63,6 +63,8 @@ function startGame() {
     image.onload = function() {
         pieces = shuffle(createPieces())
 
+        console.log(pieces)
+
         var i = 0
         for (let r = 0; r < rows; r++) {
             let row = []
@@ -141,8 +143,7 @@ function createPieces() {
     var count = 1
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
-
-            if (count <= (rows * cols - 1)){
+            if (count < (rows * cols)) {
                 var canvas = document.createElement('canvas')
                 canvas.width = piece_width
                 canvas.height = piece_height
@@ -156,9 +157,7 @@ function createPieces() {
                 img.id = `${r}${c}`
                 img.classList.add(...['piece',])
                 pieces.push(img)
-                
             }
-
             count += 1
         }
     }
