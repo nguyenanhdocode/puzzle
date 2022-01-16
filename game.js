@@ -1,19 +1,24 @@
+// Cấu hình game
 const BOARD_WIDTH = 560
 const BOARD_HEIGHT = 560
 var rows = 0
 var cols = 0
+
+// Chiều rộng và chiều cao của mảnh ghép (tự động tính toán)
 var piece_width = 0
 var piece_height = 0
 
+// Đường dẫn ảnh
 var imageSrc = ''
 var image = document.createElement('img')
-var boardMatrix = []
-var pieces = []
+var boardMatrix = [], 
+    pieces = [], 
+    selectedIndex = []
 
 var container = document.getElementById('container')
 var play = document.getElementById('play')
 var board = document.getElementById('board')
-var selectedIndex = []
+
 var moved = 0
 
 
@@ -214,7 +219,7 @@ function moveFrame(dir) {
             else {
                 selectedIndex[1] = cols - 1
             }
-            break
+            break 
         }
         case 'UP': {
             if (selectedIndex[0] - 1 >= 0) {
